@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 11 (PSD to HTML Conversion)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-badge">
+                <span class="logo-icon">N</span>
+            </div>
+            <span class="logo-text">NazikDev</span>
+        </div>
+
+        <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Search products, services..." aria-label="Search">
+        </div>
+
+        <nav class="nav-links-wrapper">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li class="divider">|</li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li class="divider">|</li>
+                <li><a href="#shop">SHOP</a></li>
+                <li class="divider">|</li>
+                <li><a href="#help">HELP</a></li>
+            </ul>
+        </nav>
+
+        <a href="#cart" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>YOUR CART</span>
+            <span class="cart-count">0</span>
+        </a>
+    </header>
+
+    <main>
+        <!-- 1. Hero Services / Products Section -->
+        <section id="home" class="hero-section">
+            <h1 class="main-title">EXAMPLES OF SERVICES OR PRODUCTS</h1>
+            
+            <div class="hero-cards-grid">
+                <div class="wireframe-card">
+                    <div class="wireframe-cross"></div>
+                    <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                </div>
+                <div class="wireframe-card">
+                    <div class="wireframe-cross"></div>
+                    <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                </div>
+                <div class="wireframe-card">
+                    <div class="wireframe-cross"></div>
+                    <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                </div>
+            </div>
+
+            <div class="cta-wrapper">
+                <a href="#shop" class="btn shop-now-btn">SHOP NOW</a>
+            </div>
+        </section>
+
+        <!-- 2. Featured Products Section -->
+        <section id="shop" class="featured-section">
+            <h2 class="section-title">FEATURED PRODUCTS</h2>
+
+            <div class="carousel-container">
+                <button class="arrow-btn left-arrow" aria-label="Previous Product">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="featured-grid">
+                    <div class="product-item">
+                        <div class="product-media">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-media">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+                </div>
+
+                <button class="arrow-btn right-arrow" aria-label="Next Product">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 3. Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-text">
+                    <h2>NEWS LETTER</h2>
+                    <p>A SHORT DESCRIPTION THAT INVITES USERS TO SIGN UP FOR WEEKLY NEWS ON WHAT THE LATEST PRODUCTS AND SERVICES ARE.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="EMAIL ADDRESS" required>
+                    <button type="submit" class="btn subscribe-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 4. Multi-Product Showcase Grid -->
+        <section class="showcase-grid-section">
+            <div class="showcase-container">
+                <!-- Large Main Feature Box -->
+                <div class="large-showcase-box">
+                    <div class="wireframe-cross"></div>
+                    <div class="camera-badge-lg"><i class="fas fa-camera"></i></div>
+                </div>
+
+                <!-- 4 Sub Products Grid -->
+                <div class="sub-products-grid">
+                    <div class="product-item">
+                        <div class="product-media sm">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-media sm">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-media sm">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-media sm">
+                            <div class="wireframe-cross"></div>
+                            <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">£100</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About Your Shop Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>ABOUT YOUR SHOP</h2>
+                <p>
+                    HERE IS WHERE YOU CAN TRY AND CAPTIVATE THE USERS BY PROVIDING THEM WITH SOME BACKGROUND TO YOUR SHOP'S EXISTENCE. YOUR MISSION AS AN ONLINE SHOP AND YOUR VISION FOR THE FUTURE OF YOUR SHOP, PRODUCTS AND SERVICES.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footerbar">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                <div class="footer-logo-circle">
+                    <span>LOGO</span>
+                </div>
+                <p class="location-text">3<sup>RD</sup> PLANET FROM THE SUN<br>ORION ARM, MILKYWAY</p>
+            </div>
+
+            <!-- Main Menu Column -->
+            <div class="footer-col">
+                <h3>MAIN MENU</h3>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#help">HELP</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Column -->
+            <div class="footer-col">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="#">THE COMPANY</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">PRESS</a></li>
+                </ul>
+            </div>
+
+            <!-- Discover Column -->
+            <div class="footer-col">
+                <h3>DISCOVER</h3>
+                <ul>
+                    <li><a href="#">THE TEAM</a></li>
+                    <li><a href="#">OUR HISTORY</a></li>
+                    <li><a href="#">BRAND MOTTO</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Links Column -->
+            <div class="footer-col">
+                <h3>FIND US ON</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> FACEBOOK</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> TWITTER</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> INSTAGRAM</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

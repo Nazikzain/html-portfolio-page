@@ -1,0 +1,279 @@
+/* =================================================
+   Coding Challenge 2: Responsive Web Design Layout
+   ================================================= */
+
+:root {
+    --bg-dark: #070a13;
+    --card-bg: rgba(13, 19, 34, 0.85);
+    --accent-blue: #00d2ff;
+    --accent-purple: #8b5cf6;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --nav-bg: #0a0f1d;
+    --border-color: rgba(0, 210, 255, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* =================================================
+   Navbar & Footer Base Styles
+   ================================================= */
+.navbar, .footerbar {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footerbar {
+    border-top: 1px solid var(--border-color);
+    border-bottom: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1.5px solid var(--accent-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--accent-blue);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 10px;
+    color: var(--text-gray);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+ul.nav-links, ul.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+ul.nav-links a, ul.footer-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+ul.nav-links a:hover, ul.footer-links a:hover {
+    color: var(--accent-blue);
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    color: var(--accent-blue);
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    color: var(--text-white);
+}
+
+/* =================================================
+   Hero Section Layout
+   ================================================= */
+.hero-section {
+    position: relative;
+    /* سحب الخلفية للأسفل لإخفاء الكتابة العلوية */
+    background: linear-gradient(90deg, rgba(7, 10, 19, 0.9) 0%, rgba(7, 10, 19, 0.6) 50%, rgba(7, 10, 19, 0.3) 100%), url('hero-bg.jpg') no-repeat center bottom/cover;
+    padding: 80px 50px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.header-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 1.5px;
+}
+
+.paragraph-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.paragraph-text {
+    color: var(--text-gray);
+    font-size: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-white);
+    border: none;
+    align-self: flex-end;
+}
+
+.sub-btn {
+    background-color: transparent;
+    border: 1.5px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+/* =================================================
+   Media Queries - قواعد التجاوب (Challenge 02 Key)
+   ================================================= */
+
+/* الشاشات المتوسطة (التابلت: أقل من 900px) */
+@media (max-width: 900px) {
+    .navbar, .footerbar {
+        padding: 18px 30px;
+    }
+    
+    .hero-section {
+        padding: 60px 30px;
+    }
+
+    ul.nav-links, ul.footer-links {
+        gap: 18px;
+    }
+
+    .header-text {
+        font-size: 28px;
+    }
+}
+
+/* الشاشات الصغيرة (الهواتف المحمولة: أقل من 600px) */
+@media (max-width: 600px) {
+    .navbar, .footerbar {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    ul.nav-links, ul.footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+        background-position: center bottom;
+    }
+
+    .hero-text-box {
+        max-width: 100%;
+    }
+
+    .header-text {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .paragraph-box {
+        padding: 18px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .read-more-btn {
+        align-self: stretch;
+    }
+}

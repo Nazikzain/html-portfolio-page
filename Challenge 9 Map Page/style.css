@@ -1,0 +1,366 @@
+/* =================================================
+   Coding Challenge 9: Live Map Styling (Dark Theme)
+   ================================================= */
+
+:root {
+    --bg-dark: #070a13;
+    --card-bg: #0d1322;
+    --input-bg: #03060d;
+    --accent-blue: #00d2ff;
+    --accent-purple: #8b5cf6;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --nav-bg: #0a0f1d;
+    --border-color: rgba(0, 210, 255, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================================
+   Header Navbar
+   ================================================= */
+.navbar {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-badge {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1.5px solid var(--accent-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--accent-blue);
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+}
+
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+ul.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+ul.nav-links a:hover, ul.nav-links a.active {
+    color: var(--accent-blue);
+}
+
+.nav-utilities {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 11px;
+}
+
+.utility-links {
+    display: flex;
+    gap: 15px;
+    color: var(--text-gray);
+}
+
+.utility-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.utility-links a:hover {
+    color: var(--accent-blue);
+}
+
+.language-selector {
+    color: var(--text-gray);
+    font-weight: 600;
+    border-left: 1px solid var(--border-color);
+    padding-left: 15px;
+}
+
+/* =================================================
+   Filter Search Bar Section
+   ================================================= */
+.filter-bar-section {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 30px;
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 130px;
+}
+
+.filter-field label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+}
+
+.filter-field input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: var(--text-white);
+    font-size: 12px;
+    width: 100%;
+}
+
+.filter-field input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.price-range .range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-range span {
+    font-size: 11px;
+    color: var(--text-gray);
+}
+
+.filter-action {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 140px;
+}
+
+.update-btn {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-white);
+    border: none;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.update-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+.advanced-search {
+    font-size: 10px;
+    color: var(--text-gray);
+    text-align: right;
+    text-decoration: underline;
+}
+
+.advanced-search:hover {
+    color: var(--accent-blue);
+}
+
+/* =================================================
+   Main Split Layout: Property Cards & Live Map
+   ================================================= */
+.map-page-main {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    flex-grow: 1;
+    height: calc(100vh - 120px);
+}
+
+.property-list-container {
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border-color);
+}
+
+.property-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 5px 20px rgba(0, 210, 255, 0.2);
+}
+
+.property-img-box {
+    height: 150px;
+    background-color: var(--input-bg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wireframe-cross {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to top right, transparent calc(50% - 1px), var(--border-color), transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), var(--border-color), transparent calc(50% + 1px));
+}
+
+.camera-badge {
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--nav-bg);
+    border: 1.5px solid var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 14px;
+}
+
+.property-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.property-info h3 {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+.property-info .price {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--text-white);
+}
+
+.property-info .desc {
+    font-size: 11px;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+/* =================================================
+   Live Leaflet Map Dark Customization
+   ================================================= */
+.map-container {
+    position: relative;
+    background-color: #070a13;
+}
+
+#live-map {
+    width: 100%;
+    height: 100%;
+    background-color: #070a13;
+    /* تحويل خريطة Esri إلى النمط الداكن المتناسق بسلاسة */
+    filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(110%);
+}
+
+/* إعادة ألوان العلامات للوضع الطبيعي غير المعكوس */
+.custom-map-pin {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.map-pin-badge {
+    background-color: var(--card-bg);
+    border: 1.5px solid var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--accent-blue);
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: transform 0.2s;
+}
+
+.map-pin-badge:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+/* =================================================
+   Responsiveness
+   ================================================= */
+@media (max-width: 992px) {
+    .map-page-main {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .map-container {
+        height: 400px;
+    }
+}

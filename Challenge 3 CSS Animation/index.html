@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 03 (Animations & Image Integration)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-badge">
+                <span class="logo-icon">N</span>
+            </div>
+            <div class="logo-text">
+                <span class="logo">NazikDev</span>
+                <span class="tagline">TAGLINE</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#purchase">PURCHASE</a></li>
+                <li><a href="#featured">FEATURED</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Animated Hero Section with Background Image -->
+    <section id="home" class="hero-section">
+        <button class="slider-arrow left-arrow" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="hero-container fade-in">
+            <h1 class="hero-title">HERO TITLE EXAMPLE</h1>
+            <p class="hero-subtitle">HERO SUB-TITLE DESCRIPTION</p>
+            
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <button class="slider-arrow right-arrow" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Main Content Showcase Section (مع تضمين صورة الهيرو الحقيقية داخل الإطار) -->
+    <section id="about" class="main-content-section">
+        <div class="content-grid">
+            <div class="image-box pulse-border">
+                <img src="hero-bg.jpg" alt="Hero Laptop Showcase" class="hero-img">
+            </div>
+
+            <div class="text-content slide-up">
+                <h2>HERO TITLE EXAMPLE</h2>
+                <h4>HERO SUB-TITLE DESCRIPTION</h4>
+                <p>Welcome to NazikDev portfolio. Crafting immersive digital experiences with cutting-edge technologies and responsive layouts.</p>
+                <p>Building high-performance web applications with seamless animations and interactive user interfaces.</p>
+                <button class="btn read-more-btn">READ MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section with Real Tech Logos -->
+    <section id="featured" class="sponsors-section">
+        <h2>SPONSORS EXAMPLE</h2>
+        <p class="sponsors-sub">SPONSORS DESCRIPTION</p>
+
+        <div class="sponsors-grid">
+            <div class="sponsor-card">
+                <i class="fab fa-react"></i>
+                <span>React Tech</span>
+            </div>
+            <div class="sponsor-card">
+                <i class="fab fa-node-js"></i>
+                <span>Node Core</span>
+            </div>
+            <div class="sponsor-card">
+                <i class="fab fa-python"></i>
+                <span>Python AI</span>
+            </div>
+            <div class="sponsor-card">
+                <i class="fab fa-aws"></i>
+                <span>Cloud AWS</span>
+            </div>
+            <div class="sponsor-card">
+                <i class="fab fa-docker"></i>
+                <span>Docker Hub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Footer & Contact Section -->
+    <footer id="contact" class="footerbar">
+        <div class="footer-container">
+            <!-- Contact Us Form -->
+            <div class="footer-col contact-form-col">
+                <h3>CONTACT US</h3>
+                <p class="col-sub">SEND US A MESSAGE</p>
+                <form class="contact-form" action="#" method="post" onsubmit="return false;">
+                    <input type="text" placeholder="FULL NAME:" required>
+                    <input type="email" placeholder="YOUR EMAIL:" required>
+                    <textarea placeholder="YOUR MESSAGE:" rows="3" required></textarea>
+                    <button type="submit" class="btn submit-btn">SUBMIT</button>
+                </form>
+            </div>
+
+            <!-- Sitemap Links -->
+            <div class="footer-col sitemap-col">
+                <h3>SITEMAP</h3>
+                <p class="col-sub">ALL OUR PAGES</p>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#featured">FEATURES</a></li>
+                    <li><a href="#purchase">PRICING</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo and Direct Contact Info -->
+            <div class="footer-col info-col">
+                <div class="footer-logo">
+                    <div class="logo-badge large">
+                        <span class="logo-icon">N</span>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone-alt"></i> 0860 555 3695</p>
+                    <p><i class="fas fa-envelope"></i> CUSTOMERSERVICE@COMPANYNAME.COM</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>COPYRIGHT 2026. ALL RIGHTS RESERVED NAZIKDEV</p>
+        </div>
+    </footer>
+
+</body>
+</html>

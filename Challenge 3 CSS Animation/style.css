@@ -1,0 +1,460 @@
+/* =================================================
+   Coding Challenge 3: Advanced CSS Animations & Styling
+   ================================================= */
+
+:root {
+    --bg-dark: #070a13;
+    --card-bg: rgba(13, 19, 34, 0.85);
+    --accent-blue: #00d2ff;
+    --accent-purple: #8b5cf6;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --nav-bg: #0a0f1d;
+    --border-color: rgba(0, 210, 255, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =================================================
+   Keyframe Animations
+   ================================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(0, 210, 255, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
+}
+
+.fade-in {
+    animation: fadeIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.slide-up {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* =================================================
+   Header & Navbar
+   ================================================= */
+.navbar {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1.5px solid var(--accent-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.logo-badge.large {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.logo-badge.large .logo-icon {
+    font-size: 32px;
+}
+
+.logo-container:hover .logo-badge {
+    transform: rotate(10deg) scale(1.08);
+    border-color: var(--accent-purple);
+}
+
+.logo-icon {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--accent-blue);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+.tagline {
+    font-size: 10px;
+    color: var(--text-gray);
+    letter-spacing: 1.5px;
+}
+
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+ul.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+ul.nav-links a:hover, ul.nav-links a.active {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+/* =================================================
+   Hero Section
+   ================================================= */
+.hero-section {
+    position: relative;
+    background: linear-gradient(90deg, rgba(7, 10, 19, 0.85) 0%, rgba(7, 10, 19, 0.5) 50%, rgba(7, 10, 19, 0.85) 100%), url('hero-bg.jpg') no-repeat center bottom/cover;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+
+.hero-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: var(--text-gray);
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+.slider-arrow {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--accent-blue);
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    transform: scale(1.1);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--accent-blue);
+    transform: scale(1.2);
+}
+
+/* =================================================
+   Main Content Section (عرض صورة الهيرو داخل الإطار)
+   ================================================= */
+.main-content-section {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.image-box {
+    height: 320px;
+    background-color: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+/* تنسيق وإظهار صورة الهيرو داخل الإطار بدقة */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+.text-content h2 {
+    color: var(--accent-blue);
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.text-content h4 {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Buttons Animation */
+.btn {
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn, .submit-btn {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-white);
+    border: none;
+}
+
+.read-more-btn:hover, .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.4);
+}
+
+/* =================================================
+   Sponsors Section
+   ================================================= */
+.sponsors-section {
+    background-color: rgba(10, 15, 29, 0.6);
+    padding: 60px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sponsors-section h2 {
+    color: var(--accent-blue);
+    font-size: 26px;
+}
+
+.sponsors-sub {
+    color: var(--text-gray);
+    margin-bottom: 35px;
+    font-size: 13px;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sponsor-card {
+    height: 90px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.sponsor-card i {
+    font-size: 26px;
+    color: var(--accent-blue);
+    transition: transform 0.3s ease;
+}
+
+.sponsor-card span {
+    font-size: 12px;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: var(--accent-blue);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2);
+}
+
+.sponsor-card:hover i {
+    transform: scale(1.2);
+    color: var(--accent-purple);
+}
+
+/* =================================================
+   Footer Section & Form
+   ================================================= */
+.footerbar {
+    background-color: var(--nav-bg);
+    padding: 60px 50px 20px 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-col h3 {
+    color: var(--accent-blue);
+    font-size: 18px;
+}
+
+.col-sub {
+    color: var(--text-gray);
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input, .contact-form textarea {
+    background-color: rgba(7, 10, 19, 0.8);
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    color: var(--text-white);
+    border-radius: 5px;
+    font-size: 13px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.sitemap-col ul {
+    list-style: none;
+}
+
+.sitemap-col a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.sitemap-col a:hover {
+    color: var(--accent-blue);
+    padding-left: 6px;
+}
+
+.info-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info p {
+    color: var(--text-gray);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.contact-info i {
+    color: var(--accent-blue);
+    margin-right: 8px;
+}
+
+.copyright-bar {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    color: var(--text-gray);
+    font-size: 12px;
+}
+
+/* Responsiveness */
+@media (max-width: 868px) {
+    .content-grid, .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

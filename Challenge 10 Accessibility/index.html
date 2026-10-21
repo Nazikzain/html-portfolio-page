@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 10 (Accessibility Challenge)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Accessible Skip Link for Keyboard Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Accessible Header Nav -->
+    <header class="navbar" role="banner">
+        <div class="logo-container">
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="logo-badge" aria-hidden="true">
+                <span class="logo-icon">N</span>
+            </div>
+            <span class="logo-text">NazikDev</span>
+        </div>
+
+        <nav id="main-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#advantages">Advantages</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" role="main">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <p class="hero-subtitle">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER</p>
+                    <h1 id="hero-title" class="hero-title">HIGH-CONVERTING LANDING PAGE LOREM IPSUM</h1>
+                    <a href="#advantages" class="btn primary-btn" role="button">BUTTON</a>
+                </div>
+
+                <div class="hero-video-box" role="region" aria-label="Featured Video Player">
+                    <div class="wireframe-cross" aria-hidden="true"></div>
+                    <button class="video-play-btn" aria-label="Play Featured Intro Video">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Advantages Section -->
+        <section id="advantages" class="advantages-section" aria-labelledby="advantages-title">
+            <div class="section-header text-center">
+                <h2 id="advantages-title" class="section-title">ADVANTAGES</h2>
+                <p class="section-desc">
+                    HERE IS WHERE YOU CAN TRY AND CAPTIVATE THE USERS ON A SECOND ATTEMPT WITH ADDITIONAL SERVICES OR PRODUCTS SHOULD THE FIRST ATTEMPT FAIL. YOU CAN'T ALWAYS GET THEM FIRST TIME ROUND AND ITS GOOD TO HAVE A BACKUP PLAN SHOULD THIS HAPPEN.
+                </p>
+            </div>
+
+            <div class="advantages-grid" role="list">
+                <article class="advantage-card" role="listitem">
+                    <div class="card-media">
+                        <div class="wireframe-cross" aria-hidden="true"></div>
+                        <div class="camera-badge" aria-hidden="true"><i class="fas fa-camera"></i></div>
+                    </div>
+                    <h3 class="card-title">High Reliability</h3>
+                    <p class="card-text">Secure infrastructure with maximum uptime and performance.</p>
+                </article>
+
+                <article class="advantage-card" role="listitem">
+                    <div class="card-media">
+                        <div class="wireframe-cross" aria-hidden="true"></div>
+                        <div class="camera-badge" aria-hidden="true"><i class="fas fa-camera"></i></div>
+                    </div>
+                    <h3 class="card-title">Seamless Integration</h3>
+                    <p class="card-text">Easily adapt with modular components and clean APIs.</p>
+                </article>
+
+                <article class="advantage-card" role="listitem">
+                    <div class="card-media">
+                        <div class="wireframe-cross" aria-hidden="true"></div>
+                        <div class="camera-badge" aria-hidden="true"><i class="fas fa-camera"></i></div>
+                    </div>
+                    <h3 class="card-title">User Centric</h3>
+                    <p class="card-text">Accessible and responsive design built for everyone.</p>
+                </article>
+            </div>
+
+            <div class="text-center margin-top-lg">
+                <a href="#details" class="btn secondary-btn" role="button">BUTTON</a>
+            </div>
+        </section>
+
+        <!-- 3. Details Content & Image Section -->
+        <section id="details" class="details-section" aria-labelledby="details-title">
+            <div class="details-container">
+                <div class="details-text-col">
+                    <h2 id="details-title" class="details-main-heading">CONTENT HEADING</h2>
+                    <p class="details-lead-text">
+                        THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER
+                    </p>
+
+                    <div class="details-subgrid">
+                        <div class="sub-col">
+                            <h3>CONTENT HEADING</h3>
+                            <p>THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER</p>
+                        </div>
+                        <div class="sub-col">
+                            <h3>CONTENT HEADING</h3>
+                            <p>THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-media-col">
+                    <div class="media-box" role="img" aria-label="Illustration placeholder for service overview">
+                        <div class="wireframe-cross" aria-hidden="true"></div>
+                        <div class="camera-badge" aria-hidden="true"><i class="fas fa-camera"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Features & Video Showcase Section -->
+        <section id="features" class="features-showcase-section" aria-labelledby="features-title">
+            <div class="showcase-grid">
+                <!-- Large Video Featured Box -->
+                <div class="large-video-box" role="region" aria-label="Main Showcase Video">
+                    <div class="wireframe-cross" aria-hidden="true"></div>
+                    <button class="video-play-btn large" aria-label="Play Main Showcase Video">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Content & Small Video Cards Grid -->
+                <div class="showcase-side-content">
+                    <div class="side-text-box">
+                        <h2 id="features-title" class="showcase-heading">FEATURES</h2>
+                        <p class="showcase-desc">
+                            TRY AND MAKE IT INTERESTING SO THAT PEOPLE ENGAGE WITH YOUR BOTTOM PAGE. THIS IS USUALLY THE PART OF THE WEBSITE PEOPLE DECIDE TO SCROLL BACK UP DUE TO NOT FINDING THINGS QUICKLY ON YOUR WEB PAGE.
+                        </p>
+                    </div>
+
+                    <div class="small-thumbs-grid" role="list">
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 1"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 2"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 3"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 4"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 5"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <div class="thumb-card" role="listitem">
+                            <div class="wireframe-cross" aria-hidden="true"></div>
+                            <button class="camera-badge-sm" aria-label="View photo 6"><i class="fas fa-camera"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Accessible Footer -->
+    <footer class="footerbar" role="contentinfo">
+        <p>&copy; 2026 NazikDev. Built with high accessibility standards (WCAG 2.1 Compliant).</p>
+    </footer>
+
+</body>
+</html>

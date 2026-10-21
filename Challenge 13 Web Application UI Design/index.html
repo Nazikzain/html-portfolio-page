@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 13 (Web Application UI)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top App Navigation Bar -->
+    <header class="app-header">
+        <div class="header-left">
+            <div class="logo-badge">
+                <i class="fas fa-camera"></i>
+            </div>
+            <span class="company-name">COMPANY NAME</span>
+        </div>
+
+        <div class="header-search">
+            <input type="text" placeholder="Search applications, data, tools..." aria-label="Search">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="header-utilities">
+            <button class="utility-icon-btn" aria-label="User Profile"><i class="fas fa-user"></i></button>
+            <button class="utility-icon-btn" aria-label="Messages"><i class="fas fa-envelope"></i></button>
+            <button class="utility-icon-btn" aria-label="Cart"><i class="fas fa-shopping-cart"></i></button>
+            <div class="user-profile-badge">
+                <i class="fas fa-camera"></i>
+                <span class="profile-name">PROFILE NAME</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Application Grid Layout -->
+    <div class="app-main-layout">
+
+        <!-- Sidebar Navigation -->
+        <aside class="app-sidebar">
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> HOME</a></li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="fas fa-cubes"></i> APPLICATIONS <i class="fas fa-chevron-down arrow"></i></a>
+                    </li>
+                    <li class="has-dropdown active-category">
+                        <a href="#"><i class="fas fa-database"></i> DATA TOOLS <i class="fas fa-chevron-down arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Analysis Tools</a></li>
+                            <li><a href="#">Data Reports</a></li>
+                            <li><a href="#">Emailer Tools</a></li>
+                            <li><a href="#">Import Designs</a></li>
+                            <li><a href="#">Previous Reports</a></li>
+                            <li><a href="#">Web Capabilities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-archive"></i> ARCHIVES <i class="fas fa-chevron-down arrow"></i></a></li>
+                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> DASHBOARD <i class="fas fa-chevron-down arrow"></i></a></li>
+                    <li><a href="#"><i class="fas fa-plug"></i> PLUG-INS <i class="fas fa-chevron-down arrow"></i></a></li>
+                    <li><a href="#"><i class="fas fa-sliders-h"></i> PREFERENCES <i class="fas fa-chevron-down arrow"></i></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-cta">
+                <button class="btn read-more-btn">READ MORE</button>
+            </div>
+        </aside>
+
+        <!-- Central Content Workspace -->
+        <main class="app-workspace">
+            
+            <!-- Welcome Banner Bar -->
+            <div class="welcome-bar">
+                <div class="welcome-user-info">
+                    <div class="user-avatar-sm"><i class="fas fa-camera"></i></div>
+                    <div>
+                        <h2>WELCOME USER</h2>
+                        <p>ADMINISTRATOR ROLE, COMPANY NAME, COUNTRY</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Carousel / Hero Showcase Box -->
+            <div class="workspace-hero-carousel">
+                <button class="carousel-arrow left" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="hero-carousel-media">
+                    <div class="wireframe-cross" aria-hidden="true"></div>
+                    <div class="camera-badge-lg"><i class="fas fa-camera"></i></div>
+                </div>
+                <button class="carousel-arrow right" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Thumbnail Ribbon -->
+            <div class="thumbnail-ribbon">
+                <div class="thumb-item"><div class="wireframe-cross"></div><i class="fas fa-camera"></i></div>
+                <div class="thumb-item"><div class="wireframe-cross"></div><i class="fas fa-camera"></i></div>
+                <div class="thumb-item"><div class="wireframe-cross"></div><i class="fas fa-camera"></i></div>
+                <div class="thumb-item"><div class="wireframe-cross"></div><i class="fas fa-camera"></i></div>
+            </div>
+
+            <!-- Data & Tool Cards Grid (Multi-Row Showcase) -->
+            <div class="data-cards-grid">
+                <!-- Card Item -->
+                <div class="data-card">
+                    <div class="card-top-media">
+                        <div class="wireframe-cross"></div>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+
+                <div class="data-card active-card">
+                    <div class="card-top-media">
+                        <div class="wireframe-cross"></div>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn active">READ DETAILS</button>
+                    </div>
+                </div>
+
+                <div class="data-card">
+                    <div class="card-top-media">
+                        <div class="wireframe-cross"></div>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+
+                <div class="data-card">
+                    <div class="card-top-media">
+                        <div class="wireframe-cross"></div>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+
+                <!-- Repeat Grid Row 2 -->
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+
+                <!-- Repeat Grid Row 3 -->
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="card-top-media"><div class="wireframe-cross"></div><i class="fas fa-folder-open"></i></div>
+                    <div class="card-body">
+                        <h3>SUB-HEADING</h3>
+                        <p>Use this to explain or give a short brief on this web application.</p>
+                        <button class="card-action-btn">READ DETAILS</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Right Side Widgets Panel -->
+        <aside class="app-widgets-panel">
+            <!-- My Chats Widget -->
+            <div class="widget-box">
+                <h3 class="widget-title">MY CHATS</h3>
+                <ul class="chats-list">
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>STACEY</h4>
+                            <p>Did you get it right?</p>
+                        </div>
+                        <button class="widget-action-btn">ADMIN</button>
+                    </li>
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>MATHEW</h4>
+                            <p>I have sent you the updates.</p>
+                        </div>
+                        <button class="widget-action-btn">ADMIN</button>
+                    </li>
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>SIMON</h4>
+                            <p>Can we join later week?</p>
+                        </div>
+                        <button class="widget-action-btn secondary">JOIN</button>
+                    </li>
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>ANTHONY</h4>
+                            <p>I readjuasted your volume.</p>
+                        </div>
+                        <button class="widget-action-btn secondary">JOIN</button>
+                    </li>
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>LINDO</h4>
+                            <p>We are going on a roadtrip.</p>
+                        </div>
+                        <button class="widget-action-btn secondary">JOIN</button>
+                    </li>
+                    <li>
+                        <div class="chat-avatar"><i class="fas fa-camera"></i></div>
+                        <div class="chat-info">
+                            <h4>ROXANNE</h4>
+                            <p>Would you like some rosemary?</p>
+                        </div>
+                        <button class="widget-action-btn secondary">JOIN</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- My To-Do List Widget -->
+            <div class="widget-box">
+                <div class="widget-header-flex">
+                    <h3 class="widget-title">MY TO DO LIST</h3>
+                    <i class="fas fa-folder-open icon-sm"></i>
+                </div>
+                <div class="todo-content text-center">
+                    <div class="todo-circle-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4>MY TO-DO LIST</h4>
+                    <p>You are currently up to date with your tasks.</p>
+                </div>
+            </div>
+
+            <!-- Top Rated Applications Widget -->
+            <div class="widget-box">
+                <h3 class="widget-title">TOP RATED APPLICATIONS</h3>
+                <p class="widget-desc">Both flexible and versatile you are able to integrate this app in your website with ease & asset.</p>
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>

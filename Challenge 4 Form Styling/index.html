@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 04 (Form Styling)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navbar with Search and Utility Icons -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-badge">
+                <span class="logo-icon">N</span>
+            </div>
+            <div class="logo-text">
+                <span class="logo">NazikDev</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#purchase">PURCHASE</a></li>
+                <li><a href="#featured">FEATURED</a></li>
+                <li><a href="#contact" class="active">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-utilities">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search..." aria-label="Search">
+            </div>
+            <div class="utility-icons">
+                <a href="#" class="icon-btn" title="Help"><i class="fas fa-question-circle"></i></a>
+                <a href="#" class="icon-btn" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <main class="form-section">
+        <div class="form-card fade-in">
+            <h1 class="form-title">CONTACT US</h1>
+
+            <form class="contact-form" action="#" method="post" onsubmit="return false;">
+                <div class="form-grid">
+                    <!-- Left Column -->
+                    <div class="form-col left-col">
+                        <div class="form-group">
+                            <label for="topic">PLEASE SELECT A TOPIC RELATED TO YOUR INQUIRY*</label>
+                            <select id="topic" name="topic" required>
+                                <option value="" disabled selected>Select an Inquiry Topic...</option>
+                                <option value="general">General Project Inquiry</option>
+                                <option value="web-dev">Web Development / Portfolio</option>
+                                <option value="design">UI/UX Design Services</option>
+                                <option value="support">Technical Support</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-height">
+                            <label for="message">MESSAGE*</label>
+                            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="form-col right-col">
+                        <div class="form-group">
+                            <label for="firstName">FIRST NAME*</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">LAST NAME*</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-MAIL*</label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Action -->
+                <div class="form-submit-container">
+                    <button type="submit" class="btn send-btn">SEND</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Bar -->
+    <footer class="footerbar">
+        <p>COPYRIGHT 2026. ALL RIGHTS RESERVED NAZIKDEV</p>
+    </footer>
+
+</body>
+</html>

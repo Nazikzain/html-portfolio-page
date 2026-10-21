@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 08 (Bootstrap Framework)</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-cyan bg-navy sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <div class="logo-badge">
+                    <span class="logo-icon">N</span>
+                </div>
+                <span class="logo-text">NazikDev</span>
+            </a>
+            <button class="navbar-toggler text-cyan border-cyan" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link text-light active" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#features">FEATURES</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#products">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#testimonials">TESTIMONIALS</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-flex gap-3 text-cyan fs-5">
+                <a href="#" class="text-cyan"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-cyan"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-cyan"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="home" class="hero-section text-center text-light d-flex align-items-center justify-content-center position-relative py-5">
+        <div class="container z-2 my-5">
+            <div class="camera-badge-large mx-auto mb-4">
+                <i class="fas fa-camera fs-2"></i>
+            </div>
+            <h1 class="display-4 fw-bold text-cyan mb-3">CONTENT BUTTON TITLE GOES HERE</h1>
+            <p class="lead text-gray mb-4">CONTENT BUTTON SUB-TITLE DESCRIPTION</p>
+            <a href="#features" class="btn btn-cyan btn-lg px-4 fw-bold">READ MORE BUTTON</a>
+        </div>
+    </header>
+
+    <!-- 2. 4-Column Feature Highlights Section -->
+    <section id="features" class="py-5 bg-navy-card border-top border-bottom border-cyan-subtle">
+        <div class="container my-4 text-center">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-icon mb-3"><i class="fas fa-dollar-sign"></i></div>
+                    <h5 class="text-cyan fw-bold">CONTENT HEADING</h5>
+                    <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-icon mb-3"><i class="fas fa-calendar-alt"></i></div>
+                    <h5 class="text-cyan fw-bold">CONTENT HEADING</h5>
+                    <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-icon mb-3"><i class="fas fa-cog"></i></div>
+                    <h5 class="text-cyan fw-bold">CONTENT HEADING</h5>
+                    <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-icon mb-3"><i class="fas fa-user"></i></div>
+                    <h5 class="text-cyan fw-bold">CONTENT HEADING</h5>
+                    <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services / Products Grid (6 Cards) Section -->
+    <section id="products" class="py-5">
+        <div class="container my-4 text-center">
+            <h2 class="fw-bold text-cyan mb-2">EXAMPLES OF SERVICES OR PRODUCTS</h2>
+            <p class="text-gray max-w-700 mx-auto mb-5 small">
+                HERE IS WHERE YOU CAN TRY AND CAPTIVATE THE USERS ON A SECOND ATTEMPT WITH ADDITIONAL SERVICES OR PRODUCTS SHOULD THE FIRST ATTEMPT FAIL. YOU CAN'T ALWAYS GET THEM FIRST TIME ROUND AND IT'S GOOD TO HAVE A BACKUP PLAN.
+            </p>
+
+            <div class="row g-4">
+                <!-- 6 Product/Service Grid Items -->
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 01</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 02</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 03</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 04</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 05</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="camera-badge mb-3"><i class="fas fa-camera"></i></div>
+                        <h6 class="text-cyan">SERVICE PRODUCT 06</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Awesome Products Section (Center Image with Sides) -->
+    <section class="py-5 bg-navy-card border-top border-bottom border-cyan-subtle">
+        <div class="container my-4 text-center">
+            <h2 class="fw-bold text-cyan mb-5">TAKE A LOOK AT OUR AWESOME PRODUCTS</h2>
+
+            <div class="row align-items-center g-4 text-start">
+                <!-- Left Details -->
+                <div class="col-lg-4 text-lg-end">
+                    <div class="mb-4">
+                        <h6 class="text-cyan fw-bold">CONTENT HEADING</h6>
+                        <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                    </div>
+                    <div>
+                        <h6 class="text-cyan fw-bold">CONTENT HEADING</h6>
+                        <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                    </div>
+                </div>
+
+                <!-- Center Main Visual -->
+                <div class="col-lg-4 text-center">
+                    <div class="featured-image-box border border-cyan rounded p-5 bg-dark position-relative">
+                        <div class="wireframe-cross"></div>
+                        <div class="camera-badge-large mx-auto my-4 position-relative z-2">
+                            <i class="fas fa-camera fs-3"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Details -->
+                <div class="col-lg-4 text-lg-start">
+                    <div class="mb-4">
+                        <h6 class="text-cyan fw-bold">CONTENT HEADING</h6>
+                        <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                    </div>
+                    <div>
+                        <h6 class="text-cyan fw-bold">CONTENT HEADING</h6>
+                        <p class="small text-gray">THIS IS A CONTENT SECTION THAT WILL ALLOW YOU TO HIGHLIGHT MAIN ASPECTS OF WHAT YOU ARE OR OFFER.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container my-4 text-center">
+            <h2 class="fw-bold text-cyan mb-2">TESTIMONIALS</h2>
+            <p class="text-gray max-w-700 mx-auto mb-5 small">
+                HERE IS WHERE YOU CAN TRY AND CAPTIVATE THE USERS BY PROVIDING THEM WITH SOME FEEDBACK FROM YOUR PREVIOUS CLIENTS.
+            </p>
+
+            <div class="row g-4 text-start">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="client-avatar"></div>
+                            <div>
+                                <h6 class="text-cyan mb-0">NAME OF CLIENT</h6>
+                                <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p class="small text-gray mb-0">HERE IS A RATING OF THE SERVICE EXPERIENCE USING THESE PRODUCTS THROUGH PREVIOUS ENGAGEMENTS.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="client-avatar"></div>
+                            <div>
+                                <h6 class="text-cyan mb-0">NAME OF CLIENT</h6>
+                                <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p class="small text-gray mb-0">HERE IS A RATING OF THE SERVICE EXPERIENCE USING THESE PRODUCTS THROUGH PREVIOUS ENGAGEMENTS.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 border border-cyan-subtle rounded bg-navy-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="client-avatar"></div>
+                            <div>
+                                <h6 class="text-cyan mb-0">NAME OF CLIENT</h6>
+                                <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p class="small text-gray mb-0">HERE IS A RATING OF THE SERVICE EXPERIENCE USING THESE PRODUCTS THROUGH PREVIOUS ENGAGEMENTS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer & Contact Section -->
+    <footer id="contact" class="bg-navy border-top border-cyan pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <!-- Form Column -->
+                <div class="col-lg-4">
+                    <h5 class="text-cyan fw-bold">CONTACT US</h5>
+                    <p class="small text-gray mb-3">SEND US A MESSAGE</p>
+                    <form onsubmit="return false;">
+                        <input type="text" class="form-control form-control-sm bg-dark text-light border-cyan-subtle mb-2" placeholder="FULL NAME:" required>
+                        <input type="email" class="form-control form-control-sm bg-dark text-light border-cyan-subtle mb-2" placeholder="YOUR EMAIL:" required>
+                        <textarea class="form-control form-control-sm bg-dark text-light border-cyan-subtle mb-3" rows="3" placeholder="YOUR MESSAGE:" required></textarea>
+                        <button class="btn btn-cyan btn-sm px-4 fw-bold">SUBMIT</button>
+                    </form>
+                </div>
+
+                <!-- Sitemap Column -->
+                <div class="col-lg-4 text-lg-center">
+                    <h5 class="text-cyan fw-bold">SITEMAP</h5>
+                    <p class="small text-gray mb-3">ALL OUR PAGES</p>
+                    <ul class="list-unstyled small">
+                        <li class="mb-1"><a href="#home" class="text-gray text-decoration-none">HOME</a></li>
+                        <li class="mb-1"><a href="#features" class="text-gray text-decoration-none">ABOUT US</a></li>
+                        <li class="mb-1"><a href="#products" class="text-gray text-decoration-none">FEATURES</a></li>
+                        <li class="mb-1"><a href="#testimonials" class="text-gray text-decoration-none">PRICING</a></li>
+                        <li class="mb-1"><a href="#contact" class="text-gray text-decoration-none">CONTACT US</a></li>
+                    </ul>
+                </div>
+
+                <!-- Logo & Contact Info Column -->
+                <div class="col-lg-4 text-lg-end text-center">
+                    <div class="footer-circle-logo mx-auto ms-lg-auto mb-3">
+                        <span class="fw-bold text-cyan fs-4">LOGO</span>
+                    </div>
+                    <p class="small text-gray mb-1"><i class="fas fa-phone-alt text-cyan me-2"></i> 0860 555 3695</p>
+                    <p class="small text-gray"><i class="fas fa-envelope text-cyan me-2"></i> CUSTOMERSERVICE@COMPANYNAME.COM</p>
+                </div>
+            </div>
+
+            <div class="text-center pt-3 border-top border-secondary-subtle">
+                <p class="small text-gray mb-0">COPYRIGHT 2001. ALL RIGHTS RESERVED COMPANY NAME</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NazikDev - Challenge 07 (Image Gallery)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-badge">
+                <span class="logo-icon">N</span>
+            </div>
+            <div class="logo-text">
+                <span class="logo">NazikDev</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#gallery" class="active">GALLERY</a></li>
+                <li><a href="#featured">FEATURED</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-utilities">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search..." aria-label="Search">
+            </div>
+            <div class="utility-icons">
+                <a href="#" class="icon-btn" title="Help"><i class="fas fa-question-circle"></i></a>
+                <a href="#" class="icon-btn" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Image Gallery Section -->
+    <main id="gallery" class="gallery-section">
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item item-1">
+                <div class="wireframe-cross"></div>
+                <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                <div class="gallery-overlay"><span>Project Alpha</span></div>
+            </div>
+
+            <!-- Gallery Item 2 (Tall spanning item) -->
+            <div class="gallery-item item-2">
+                <div class="wireframe-cross"></div>
+                <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                <div class="gallery-overlay"><span>Cyberpunk UI</span></div>
+            </div>
+
+            <!-- Gallery Item 3 (Wide spanning item) -->
+            <div class="gallery-item item-3">
+                <div class="wireframe-cross"></div>
+                <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                <div class="gallery-overlay"><span>Neural Network</span></div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item item-4">
+                <div class="wireframe-cross"></div>
+                <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                <div class="gallery-overlay"><span>Quantum Core</span></div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item item-5">
+                <div class="wireframe-cross"></div>
+                <div class="camera-badge"><i class="fas fa-camera"></i></div>
+                <div class="gallery-overlay"><span>Matrix Grid</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Comprehensive Footer & Contact Section -->
+    <footer id="contact" class="footerbar">
+        <div class="footer-container">
+            <!-- Contact Us Column -->
+            <div class="footer-col contact-col">
+                <h3>CONTACT US</h3>
+                <p class="col-sub">SEND US A MESSAGE</p>
+                <form class="contact-form" action="#" method="post" onsubmit="return false;">
+                    <input type="text" placeholder="FULL NAME:" required>
+                    <input type="email" placeholder="YOUR EMAIL:" required>
+                    <textarea placeholder="YOUR MESSAGE:" rows="3" required></textarea>
+                    <button type="submit" class="btn submit-btn">SUBMIT</button>
+                </form>
+            </div>
+
+            <!-- Sitemap Column -->
+            <div class="footer-col sitemap-col">
+                <h3>SITEMAP</h3>
+                <p class="col-sub">ALL OUR PAGES</p>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#featured">FEATURES</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo & Info Column -->
+            <div class="footer-col info-col">
+                <div class="footer-logo-circle">
+                    <span class="logo">LOGO</span>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone-alt"></i> 0860 555 3695</p>
+                    <p><i class="fas fa-envelope"></i> CUSTOMERSERVICE@COMPANYNAME.COM</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>COPYRIGHT 2001. ALL RIGHTS RESERVED COMPANY NAME</p>
+        </div>
+    </footer>
+
+</body>
+</html>

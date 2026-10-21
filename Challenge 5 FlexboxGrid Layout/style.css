@@ -1,0 +1,263 @@
+/* =================================================
+   Coding Challenge 5: Flexbox/Grid Layout Challenge
+   ================================================= */
+
+:root {
+    --bg-dark: #070a13;
+    --card-bg: #0d1322;
+    --input-bg: #03060d;
+    --accent-blue: #00d2ff;
+    --accent-purple: #8b5cf6;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --nav-bg: #0a0f1d;
+    --border-color: rgba(0, 210, 255, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* =================================================
+   Navbar Styling
+   ================================================= */
+.navbar {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1.5px solid var(--accent-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--accent-blue);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+}
+
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+ul.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+ul.nav-links a:hover, ul.nav-links a.active {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+/* =================================================
+   Invite Users Section Layout (Grid & Flexbox)
+   ================================================= */
+.invite-section {
+    padding: 50px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.step-indicators {
+    display: flex;
+    gap: 12px;
+}
+
+.step-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-gray);
+    transition: all 0.3s ease;
+}
+
+.step-dot.active {
+    background-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.invite-card {
+    background-color: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px 50px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invite-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+}
+
+.invite-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.invite-input-group {
+    display: flex;
+    align-items: center;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 4px 12px;
+    transition: all 0.3s ease;
+}
+
+.invite-input-group:focus-within {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.invite-input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.remove-field-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.remove-field-btn:hover {
+    color: #ff4d4d;
+}
+
+.invite-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.send-invites-btn {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-white);
+    border: none;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.send-invites-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.4);
+}
+
+.skip-step {
+    color: var(--text-gray);
+    font-size: 12px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.skip-step:hover {
+    color: var(--accent-blue);
+}
+
+/* =================================================
+   Footer
+   ================================================= */
+.footerbar {
+    background-color: var(--nav-bg);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    color: var(--text-gray);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .invite-card {
+        padding: 25px 20px;
+    }
+}
